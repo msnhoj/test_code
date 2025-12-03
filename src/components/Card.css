@@ -1,0 +1,203 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.playing-card {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+              0 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playing-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.playing-card.joker {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+  color: #fff;
+}
+
+.card-corner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-corner.top-left {
+  align-self: flex-start;
+}
+
+.card-corner.bottom-right {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.card-corner .rank {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.card-corner .suit {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.playing-card.red .card-corner {
+  color: #c0392b;
+}
+
+.playing-card.black .card-corner {
+  color: #2c3e50;
+}
+
+.playing-card.joker .card-corner {
+  color: #fff;
+}
+
+.card-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.exercise-name {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.playing-card.joker .exercise-name {
+  color: #fff;
+}
+
+.suit-symbol-large {
+  font-size: 64px;
+  margin: 15px 0;
+  opacity: 0.3;
+}
+
+.reps-display {
+  font-size: 36px;
+  font-weight: bold;
+  color: #27ae60;
+  background: rgba(39, 174, 96, 0.1);
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.playing-card.joker .reps-display {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card-instructions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.card-instructions p {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .playing-card {
+    width: 280px;
+    height: 400px;
+    padding: 15px;
+  }
+
+  .card-corner .rank {
+    font-size: 28px;
+  }
+
+  .card-corner .suit {
+    font-size: 24px;
+  }
+
+  .exercise-name {
+    font-size: 24px;
+  }
+
+  .suit-symbol-large {
+    font-size: 52px;
+  }
+
+  .reps-display {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
+
+  .card-instructions p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .playing-card {
+    width: 240px;
+    height: 350px;
+    padding: 12px;
+  }
+
+  .card-corner .rank {
+    font-size: 24px;
+  }
+
+  .card-corner .suit {
+    font-size: 20px;
+  }
+
+  .exercise-name {
+    font-size: 20px;
+  }
+
+  .suit-symbol-large {
+    font-size: 44px;
+  }
+
+  .reps-display {
+    font-size: 26px;
+  }
+}

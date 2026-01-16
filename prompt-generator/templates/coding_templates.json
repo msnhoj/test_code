@@ -1,0 +1,296 @@
+{
+  "categories": {
+    "debugging": {
+      "name": "Debug & Fix Issues",
+      "description": "Help identify and fix bugs, errors, or unexpected behavior",
+      "questions": [
+        {
+          "id": "error_type",
+          "question": "What type of error are you encountering?",
+          "options": ["Runtime error", "Compile/Build error", "Logic error", "Performance issue", "Security vulnerability", "Other"],
+          "required": true
+        },
+        {
+          "id": "error_message",
+          "question": "What is the exact error message (if any)?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "expected_behavior",
+          "question": "What behavior did you expect?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "actual_behavior",
+          "question": "What is actually happening?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "reproduction_steps",
+          "question": "What steps reproduce the issue?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "attempted_solutions",
+          "question": "What have you already tried?",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "I need help debugging a {error_type} in my code.\n\n**Error Message:**\n{error_message}\n\n**Expected Behavior:**\n{expected_behavior}\n\n**Actual Behavior:**\n{actual_behavior}\n\n**Steps to Reproduce:**\n{reproduction_steps}\n\n**What I've Tried:**\n{attempted_solutions}\n\n**Relevant Code:**\n```{language}\n{code_snippet}\n```\n\nPlease help me identify the root cause and provide a fix."
+    },
+    "feature_implementation": {
+      "name": "Implement New Feature",
+      "description": "Build new functionality from scratch or extend existing code",
+      "questions": [
+        {
+          "id": "feature_description",
+          "question": "Describe the feature you want to build:",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "user_story",
+          "question": "What user problem does this solve? (As a [user], I want [goal] so that [benefit])",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "acceptance_criteria",
+          "question": "What are the acceptance criteria? (List specific requirements)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "constraints",
+          "question": "Are there any technical constraints or requirements?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "existing_code",
+          "question": "Is there existing code this needs to integrate with?",
+          "options": ["Yes, I'll provide it", "No, starting fresh", "Yes, but it's in my project files"],
+          "required": true
+        },
+        {
+          "id": "testing_requirements",
+          "question": "What testing is required?",
+          "options": ["Unit tests", "Integration tests", "Both", "None specified"],
+          "required": false
+        }
+      ],
+      "template": "I need to implement a new feature.\n\n**Feature Description:**\n{feature_description}\n\n**User Story:**\n{user_story}\n\n**Acceptance Criteria:**\n{acceptance_criteria}\n\n**Technical Constraints:**\n{constraints}\n\n**Integration Context:**\n{existing_code}\n\n**Testing Requirements:**\n{testing_requirements}\n\n**Technology Stack:**\n- Language: {language}\n- Framework: {framework}\n\n**Existing Code (if applicable):**\n```{language}\n{code_snippet}\n```\n\nPlease provide a complete implementation with explanations."
+    },
+    "code_review": {
+      "name": "Code Review & Improvement",
+      "description": "Get feedback on code quality, patterns, and best practices",
+      "questions": [
+        {
+          "id": "review_focus",
+          "question": "What aspects should the review focus on?",
+          "options": ["Overall quality", "Performance", "Security", "Readability", "Architecture", "All of the above"],
+          "required": true
+        },
+        {
+          "id": "specific_concerns",
+          "question": "Do you have any specific concerns about this code?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "code_purpose",
+          "question": "What does this code do? (Brief description)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "production_ready",
+          "question": "Is this intended for production use?",
+          "options": ["Yes", "No, it's a prototype", "Learning/practice project"],
+          "required": false
+        }
+      ],
+      "template": "Please review the following code.\n\n**Review Focus:**\n{review_focus}\n\n**Code Purpose:**\n{code_purpose}\n\n**Specific Concerns:**\n{specific_concerns}\n\n**Production Intent:**\n{production_ready}\n\n**Code to Review:**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. Overall assessment\n2. Specific issues found (if any)\n3. Suggested improvements with code examples\n4. Best practices recommendations"
+    },
+    "refactoring": {
+      "name": "Refactor Existing Code",
+      "description": "Improve code structure, readability, or performance",
+      "questions": [
+        {
+          "id": "refactor_goal",
+          "question": "What is the primary goal of this refactoring?",
+          "options": ["Improve readability", "Improve performance", "Reduce complexity", "Apply design patterns", "Improve testability", "Multiple goals"],
+          "required": true
+        },
+        {
+          "id": "current_issues",
+          "question": "What issues exist in the current code?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "preserve_behavior",
+          "question": "Must the external API/interface remain unchanged?",
+          "options": ["Yes, must be backward compatible", "No, can change interface", "Partially, some things must stay"],
+          "required": true
+        },
+        {
+          "id": "scope_limit",
+          "question": "Are there any constraints on the refactoring scope?",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "I need to refactor the following code.\n\n**Refactoring Goal:**\n{refactor_goal}\n\n**Current Issues:**\n{current_issues}\n\n**Backward Compatibility:**\n{preserve_behavior}\n\n**Scope Constraints:**\n{scope_limit}\n\n**Current Code:**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. Analysis of current issues\n2. Refactored code with explanations\n3. Summary of changes made\n4. Any trade-offs to consider"
+    },
+    "explanation": {
+      "name": "Explain Code/Concept",
+      "description": "Understand how code works or learn a programming concept",
+      "questions": [
+        {
+          "id": "explanation_type",
+          "question": "What do you need explained?",
+          "options": ["Specific code snippet", "Programming concept", "Algorithm/Data structure", "Framework/Library usage", "Design pattern", "Error message"],
+          "required": true
+        },
+        {
+          "id": "knowledge_level",
+          "question": "What is your experience level with this topic?",
+          "options": ["Beginner", "Intermediate", "Advanced (need deep dive)"],
+          "required": true
+        },
+        {
+          "id": "specific_questions",
+          "question": "What specific aspects are confusing?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "use_case",
+          "question": "Why do you need to understand this? (Context helps tailor explanation)",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "Please explain the following.\n\n**Topic Type:**\n{explanation_type}\n\n**My Experience Level:**\n{knowledge_level}\n\n**Specific Questions:**\n{specific_questions}\n\n**Context/Use Case:**\n{use_case}\n\n**Code/Concept:**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. Clear explanation at my level\n2. Step-by-step breakdown (if code)\n3. Practical examples\n4. Common pitfalls to avoid"
+    },
+    "testing": {
+      "name": "Write Tests",
+      "description": "Create unit tests, integration tests, or test strategies",
+      "questions": [
+        {
+          "id": "test_type",
+          "question": "What type of tests do you need?",
+          "options": ["Unit tests", "Integration tests", "End-to-end tests", "Test strategy/plan", "Mock/Stub setup"],
+          "required": true
+        },
+        {
+          "id": "testing_framework",
+          "question": "What testing framework should be used?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "coverage_requirements",
+          "question": "What level of test coverage do you need?",
+          "options": ["Critical paths only", "High coverage (80%+)", "Complete coverage", "Not specified"],
+          "required": false
+        },
+        {
+          "id": "edge_cases",
+          "question": "Are there specific edge cases to consider?",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "I need help writing tests for the following code.\n\n**Test Type:**\n{test_type}\n\n**Testing Framework:**\n{testing_framework}\n\n**Coverage Requirements:**\n{coverage_requirements}\n\n**Known Edge Cases:**\n{edge_cases}\n\n**Code to Test:**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. Complete test file(s)\n2. Coverage of happy paths and edge cases\n3. Explanation of test strategy\n4. Any mocking/stubbing setup needed"
+    },
+    "api_design": {
+      "name": "Design API/Interface",
+      "description": "Design REST APIs, function interfaces, or module contracts",
+      "questions": [
+        {
+          "id": "api_type",
+          "question": "What type of API/interface are you designing?",
+          "options": ["REST API", "GraphQL API", "Function/Method interface", "Module/Package interface", "Database schema", "Event-driven interface"],
+          "required": true
+        },
+        {
+          "id": "use_cases",
+          "question": "What are the main use cases this API must support?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "consumers",
+          "question": "Who/what will consume this API?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "constraints",
+          "question": "Are there any constraints (auth, rate limiting, versioning)?",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "I need help designing an API/interface.\n\n**API Type:**\n{api_type}\n\n**Use Cases:**\n{use_cases}\n\n**API Consumers:**\n{consumers}\n\n**Constraints:**\n{constraints}\n\n**Technology Stack:**\n- Language: {language}\n- Framework: {framework}\n\n**Existing Code Context (if any):**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. API design with endpoints/methods\n2. Request/Response schemas\n3. Error handling approach\n4. Implementation skeleton"
+    },
+    "optimization": {
+      "name": "Optimize Performance",
+      "description": "Improve code performance, memory usage, or efficiency",
+      "questions": [
+        {
+          "id": "optimization_target",
+          "question": "What are you trying to optimize?",
+          "options": ["Execution speed", "Memory usage", "Database queries", "Network calls", "Bundle size", "Multiple aspects"],
+          "required": true
+        },
+        {
+          "id": "current_performance",
+          "question": "What is the current performance? (metrics if available)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "target_performance",
+          "question": "What is your target performance?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "constraints",
+          "question": "Are there any constraints (can't change algorithm, limited refactoring)?",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "template": "I need help optimizing code performance.\n\n**Optimization Target:**\n{optimization_target}\n\n**Current Performance:**\n{current_performance}\n\n**Target Performance:**\n{target_performance}\n\n**Constraints:**\n{constraints}\n\n**Code to Optimize:**\n```{language}\n{code_snippet}\n```\n\nPlease provide:\n1. Performance analysis of current code\n2. Optimized implementation\n3. Explanation of optimizations made\n4. Expected performance improvement\n5. Any trade-offs introduced"
+    }
+  },
+  "languages": [
+    "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust",
+    "Ruby", "PHP", "Swift", "Kotlin", "Scala", "R", "MATLAB", "Shell/Bash", "SQL", "Other"
+  ],
+  "frameworks": {
+    "Python": ["Django", "Flask", "FastAPI", "Pytest", "None/Vanilla"],
+    "JavaScript": ["React", "Vue", "Angular", "Node.js", "Express", "Next.js", "None/Vanilla"],
+    "TypeScript": ["React", "Vue", "Angular", "Node.js", "Express", "Next.js", "NestJS", "None/Vanilla"],
+    "Java": ["Spring Boot", "Jakarta EE", "Micronaut", "None/Vanilla"],
+    "C#": [".NET Core", "ASP.NET", "Entity Framework", "None/Vanilla"],
+    "Go": ["Gin", "Echo", "Fiber", "None/Vanilla"],
+    "Rust": ["Actix", "Rocket", "Tokio", "None/Vanilla"],
+    "default": ["None/Vanilla"]
+  },
+  "refinement_prompts": {
+    "missing_context": "I notice some context might be helpful. Could you provide: {missing_items}",
+    "clarify_goal": "To give you the best solution, I'd like to clarify: {question}",
+    "suggest_approach": "Based on your requirements, I'd suggest: {approach}. Would you like me to proceed with this, or would you prefer a different approach?",
+    "too_broad": "Your request covers several areas. Let's focus on one at a time. Which would you like to start with: {options}"
+  }
+}
